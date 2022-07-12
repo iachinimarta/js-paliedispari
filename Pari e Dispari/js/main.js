@@ -24,10 +24,11 @@ console.log(computerNumber);
 let sommaNumeri = userNumber + computerNumber;
 console.log(sommaNumeri);
 
-// Se il risultato della somma è pari e l'utente ha scelto pari allora vince
+// Se il risultato della somma è pari e l'utente ha scelto pari
 if (sommaNumeri % 2 == 0 && userChoice == pari) {
     console.log("pari");
     alert("Hai vinto!");
+// Se il risultato della somma è dispari e l'utente ha scelto dispari
 } else if (sommaNumeri % 2 == 1 && userChoice == dispari) { 
     console.log("dispari");
     alert("Hai vinto!");
