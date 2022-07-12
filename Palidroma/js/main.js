@@ -37,7 +37,7 @@ console.log(newWordSplit);
 let wordReverse = [];
 
 for (let i = newWordSplit.length -1; i >= 0; i--) {
-    wordReverse.push(newWordSplit[i])
+    wordReverse.push(newWordSplit[i]);
 }
 
 console.log(wordReverse);
