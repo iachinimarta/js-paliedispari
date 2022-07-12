@@ -3,11 +3,11 @@ const dispari = "dispari";
 
 // Chiedo all utente di scegliere
 const userChoice = prompt("Scegli tra PARI o DISPARI");
-console.log(userChoice);
+console.log("Scelta utente: "+ userChoice);
 
 if (userChoice == "pari" | userChoice == "dispari") {
     const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
-    console.log(userNumber);
+    console.log("Scelta utente: " + userNumber);
 
     // Imposto una condizione per l'utente
     if (userNumber > 5 | userNumber < 1) {
@@ -16,11 +16,11 @@ if (userChoice == "pari" | userChoice == "dispari") {
 
     // Genero un numero casuale per il computer
     const computerNumber = Math.floor(Math.random() * 5) + 1;
-    console.log(computerNumber);
+    console.log("Scelta computer: " + computerNumber);
 
     // Imposto la variabile che calcola la somma dei numeri scelti
     let sommaNumeri = userNumber + computerNumber;
-    console.log(sommaNumeri);
+    console.log("La somma è: " + sommaNumeri);
 
     // Se il risultato della somma è pari e l'utente ha scelto pari
     if (sommaNumeri % 2 == 0 && userChoice == pari) {
