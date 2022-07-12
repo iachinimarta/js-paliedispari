@@ -1,4 +1,5 @@
 const pari = "pari";
+const dispari = "dispari";
 
 
 // Chiedo all utente di scegliere
@@ -27,7 +28,9 @@ console.log(sommaNumeri);
 if (sommaNumeri % 2 == 0 && userChoice == pari) {
     console.log("pari");
     alert("Hai vinto!");
-} else { 
+} else if (sommaNumeri % 2 == 1 && userChoice == dispari) { 
     console.log("dispari");
+    alert("Hai vinto!");
+} else {
     alert("Ritenta!");
 }
