@@ -1,5 +1,5 @@
-const pari = "pari";
-const dispari = "dispari";
+// const pari = "pari";
+// const dispari = "dispari";
 
 // Chiedo all utente di scegliere
 const userChoice = prompt("Scegli tra PARI o DISPARI");
@@ -14,23 +14,38 @@ if (userChoice == "pari" | userChoice == "dispari") {
         alert("Valore inserito non corretto!");
     }
 
-    // Genero un numero casuale per il computer
-    const computerNumber = Math.floor(Math.random() * 5) + 1;
+    // Genero un numero casuale per il computer (SENZA funzione)
+    // const computerNumber = Math.floor(Math.random() * 5) + 1;
+    // console.log("Scelta computer: " + computerNumber);
+
+    //Richiamo la funzione per generare numero casuale
+    const computerNumber = getRandomN(1,5);
     console.log("Scelta computer: " + computerNumber);
 
     // Imposto la variabile che calcola la somma dei numeri scelti
     let sommaNumeri = userNumber + computerNumber;
     console.log("La somma è: " + sommaNumeri);
 
-    // Se il risultato della somma è pari e l'utente ha scelto pari
-    if (sommaNumeri % 2 == 0 && userChoice == pari) {
-        alert("Hai vinto!");
-    // Se il risultato della somma è dispari e l'utente ha scelto dispari
-    } else if (sommaNumeri % 2 == 1 && userChoice == dispari) { 
-        alert("Hai vinto!");
-    } else {
-        alert("Ritenta!");
-    }
+    //Richiamo la funzione per controllare se il numero è pari o dispari
+    const pariDispari = evenOdd(sommaNumeri);
+    console.log(pariDispari);
+
 } else {
     alert("Valore inserito non corretto!");
+}
+
+
+
+//Funzioni
+
+function getRandomN (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function evenOdd (numero) {
+    if (numero % 2 == 0) {
+        return "pari";
+    } else if (numero % 2 == 1) {
+        return "dispari";
+    }
 }
